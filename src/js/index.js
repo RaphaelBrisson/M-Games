@@ -7,7 +7,7 @@ import $ from 'jquery';
 
 class GetAllVideoGames {
 
-	//constructor : nécessaire car 
+	// constructor : nécessaire
 	constructor () {
         this.smoothScroll();
         new SearchBarAnimation();
@@ -27,7 +27,7 @@ class GetAllVideoGames {
 	      $('html, body').animate({
 	        scrollTop: $(hash).offset().top
 	      }, 500, () => {
-	        // ajoute le hash (#) à l'URL quand le scroll est terminé
+	        // Ajoute le hash (#) à l'URL quand le scroll est terminé
 	        window.location.hash = hash;
 	      });
 	    }

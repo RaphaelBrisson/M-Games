@@ -1,4 +1,7 @@
 import $ from 'jquery';
+// Importe la template handlebars
+import GameDataTemplate from './../templates/gameDataTemplate.hbs';
+
 
 export default class RandomGame {
 
@@ -9,37 +12,35 @@ export default class RandomGame {
 
 	// Affiche un jeu aléatoire (appelé au chargement et lorsqu'on clique sur le bouton)
 	displayRandomGame () {
-		//génère nb aléa
-		const randomID = Math.floor(Math.random() * 420000);
-		//requete du jeu grace au nb aléa
+		// Génère nb aléa. la valeur max (500000) est supérieure au nombre de jeux disponibles, mais s'il y a pas de jeu correspondants, la requête est faite de nouveau. (Je n'ai pas le moyen d'avoir dynamiquement le nombre de jeux dispo).
+		const randomID = Math.floor(Math.random() * 500000);
+		// Requete du jeu grace au nb aléa
         const rawg = 'https://api.rawg.io/api/games/' + randomID;
 
 		$.ajaxSetup({cache: false});
 		$.getJSON(rawg)
 
 		.then((response) => {
-			//response = JSON.parse(response);
 
-			// Remplit le HTML grâce aux données de la requête
-			$('.random-game-data .game-title').text(response.name);
-			$('.random-game-data .release-date span').text(response.released);
-			let platforms = [];
+			// Variable qui contient toutes les plateformes disponibles
+			let allplatforms = [];
 			let i = 0;
 			$(response.platforms).each( () => {
-				platforms.push(" " + response.platforms[i].platform.name);
+				allplatforms.push(" " + response.platforms[i].platform.name);
 				i++;
-		  	});
-			$('.random-game-data .platforms span').text(platforms);
-			$('.random-game-data .description p').html(response.description);
-			$('.random-game-data .game-image').attr('src', response.background_image);
-			$('.random-game-data .website span a').text(response.website);
-			$('.random-game-data .website span a').attr('href', response.website);
-			$('.random-game-data .website-phone a').attr('href', response.website);
+		 	});
+		 	allplatforms = allplatforms.join(", ");
 
+
+		 	// rendered prend pour valeur la template GameDataTemplate avec comme paramètre response 
+			var rendered = GameDataTemplate(response);
+			// On injecte rendered
+			$('.random-game-data').html(rendered);
+			$('.random-game-data .platforms').append(allplatforms);
 		})
 
 		.catch((e) => {
-			console.log('error: ', e);
+			// Si erreur, on recommence
 			this.displayRandomGame();
 		});
 	}

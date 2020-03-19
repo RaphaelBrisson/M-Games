@@ -15,7 +15,7 @@ config = {
 
     output: {
         filename: 'main.js',
-        path: PATHS.dist,
+        //path: PATHS.dist,
     },
 
     module: {
@@ -25,11 +25,15 @@ config = {
                 use: 'html-loader'
             },
             {
-                enforce: 'pre',
-                test: /\.js$/,
-                exclude: /node_modules/,
-                //loader: 'eslint-loader',
+                test: /\.hbs$/,
+                use: 'handlebars-loader'
             },
+            // {
+            //     enforce: 'pre',
+            //     test: /\.js$/,
+            //     exclude: /node_modules/,
+            //     loader: 'eslint-loader',
+            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -42,7 +46,7 @@ config = {
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -55,7 +59,7 @@ config = {
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)$/,
+                test: /\.(woff(2)?|ttf|eot)$/,
                 use: [{
                     loader: 'file-loader',
                     options: {

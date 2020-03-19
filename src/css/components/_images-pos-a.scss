@@ -1,0 +1,64 @@
+//IMAGES POS-A
+#pacman
+{
+	position: absolute;
+	bottom: -15px;
+	right: 200px;
+	width: 150px;
+}
+
+#dragonica
+{
+	position: absolute;
+	bottom: -15px;
+	left: 50px;
+	width: 350px;
+}
+
+#pokemon
+{
+	position: absolute;
+	bottom: -7px;
+    left: 50px;
+    width: 250px;
+}
+
+#battlefield
+{
+	position: absolute;
+	bottom: -6px;
+    right: 60px;
+    width: 190px;
+}
+
+
+@media all and (max-width: 1170px)
+{
+
+}
+
+@media all and (max-width: 980px)
+{
+  #battlefield
+  {
+    display: none;
+  }
+}
+
+@media all and (max-width: 768px)
+{
+  #pacman, #dragonica, #pokemon
+  {
+    display: none;
+  }
+}
+
+@media all and (max-width: 480px)
+{
+
+}
+
+@media all and (max-width: 320px)
+{
+
+}

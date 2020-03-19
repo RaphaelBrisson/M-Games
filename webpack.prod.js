@@ -12,8 +12,11 @@ const PATHS = {
 new webpack.EnvironmentPlugin(['NODE_ENV']);
 
 config = {
+
     mode: 'production',
+
     entry: './src/js/index.js',
+
     output: {
         filename: 'main.js',
     },
@@ -23,6 +26,10 @@ config = {
             {
                 test: /\.html$/,
                 use: 'html-loader'
+            },
+            {
+                test: /\.hbs$/,
+                use: 'handlebars-loader'
             },
             {
                 test: /\.js$/,
@@ -70,7 +77,11 @@ config = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({
+        new Html
+        {
+                test: /\.hbs$/,
+                use: 'handlebars-loader'
+            },Plugin({
             template: './src/index.html',
             filename: 'index.html'
         }),

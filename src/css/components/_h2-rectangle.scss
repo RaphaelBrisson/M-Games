@@ -1,0 +1,88 @@
+$global-pr : 75px;
+$global-pl : 75px;
+
+h2
+{
+	background: transparent linear-gradient(90deg, #F792561F 0%, #F7925600 100%) 0% 0% no-repeat padding-box;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: $global-pl;
+}
+
+.h2-bg
+{
+	width: 30%;
+	padding-top: 60px;
+	margin-left: -$global-pl;
+}
+
+
+
+
+@media all and (max-width: 1170px)
+{
+  $global-pr : 70px;
+  $global-pl : 70px;
+  	h2
+	{
+		padding-left: $global-pl;
+	}
+
+	.h2-bg
+	{
+		width: 35%;
+		margin-left: -$global-pl;
+	}
+}
+
+@media all and (max-width: 980px)
+{
+  $global-pr : 60px;
+  $global-pl : 60px;
+  	h2
+	{
+		padding-left: $global-pl;
+	}
+
+	.h2-bg
+	{
+		width: 50%;
+		margin-left: -$global-pl;
+	}
+}
+
+@media all and (max-width: 768px)
+{
+  $global-pr : 50px;
+  $global-pl : 50px;
+  	h2
+	{
+		padding-left: $global-pl;
+	}
+
+	.h2-bg
+	{
+		width: 60%;
+		margin-left: -$global-pl;
+	}
+}
+
+@media all and (max-width: 480px)
+{
+  $global-pr : 30px;
+  $global-pl : 30px;
+  	h2
+	{
+		background: none;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.h2-bg
+	{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

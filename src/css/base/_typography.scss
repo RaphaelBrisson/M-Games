@@ -26,25 +26,13 @@ h1
 	z-index: 1000;
 }
 
-// .h2-bg
-// {
-// 	background: transparent linear-gradient(90deg, #F7925626 0%, #F7925600 100%) 0% 0% no-repeat padding-box;
-// 	border-radius: 49px;
-// 	position: relative;
-// }
-
 h2
 {
-	//position: absolute;
-	// left: 0;
-	// right: 0;
-	// top: 0;
-	// bottom: 0;
 	font-family: 'Passion One', cursive;
 	font-size: 40px;
 	font-weight: $regular;
 	color: $orange;
-	padding-top: 60px;
+	//padding-top: 60px;
 }
 
 @media all and (max-width: 480px)
