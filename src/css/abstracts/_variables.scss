@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+//COLORS
+$white: #FFFFFF;
+$orange: #F79256;
+$search-bar-color: #522a4f;
+
+//TEXT
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

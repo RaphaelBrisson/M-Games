@@ -1,0 +1,267 @@
+//SECTIONS
+header, #search-game, #random-game
+{
+	height: 100vh;
+	min-height: 500px;
+  max-height: 100vh;
+	background: transparent linear-gradient(180deg, #311448 0%, #381752 100%) 0% 0% no-repeat padding-box;
+	position: relative;
+}
+
+
+//GAMES DATA
+
+.requested-game-data
+{
+  display: none;
+}
+
+.requested-game-data, .random-game-data
+{
+  padding-top: 150px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding-left: 250px;
+  padding-right: 250px;
+
+  .top-container
+  {
+    display: flex;
+    min-height: 200px;
+
+    &>div:first-of-type
+    {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .game-title
+      {
+        font-size: 40px;
+        font-weight: $bold;
+        padding-bottom: 10px;
+      }
+
+      .website-phone
+      {
+        display: none;
+      }
+    }
+    
+    &>div:last-of-type
+    {
+      position: relative;
+      width: 40%;
+
+      .game-image
+      {
+        //width: 100%;
+        max-height: 37vh;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .description
+    {
+      margin-top: 50px;
+      max-height: 200px;
+      overflow-y: scroll;
+    }
+}
+
+@media all and (max-width: 1170px)
+{
+  .requested-game-data, .random-game-data
+  {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 200px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  header, #search-game, #random-game
+  {
+    min-height: 900px;
+  }
+}
+
+@media all and (max-width: 980px)
+{
+  .requested-game-data, .random-game-data
+  {
+    padding-left: 100px;
+    padding-right: 100px;
+    position: static;
+    top: 0;
+    transform: none;
+  }
+}
+
+@media all and (max-width: 768px)
+{
+  .requested-game-data, .random-game-data
+  {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .requested-game-data
+  {
+    padding-top: 220px;
+  }
+
+
+  .requested-game-data, .random-game-data
+  {
+    .top-container
+    {
+      flex-direction: column;
+
+      &>div:first-of-type
+      {
+        width: 100%;
+        min-height: 20vh;
+
+        *
+        {
+          margin: auto;
+          padding-bottom: 25px;
+        }
+
+        .game-title
+        {
+          padding-bottom: 30px;
+        }
+      }
+      
+      &>div:last-of-type
+      {
+        width: 100%;
+        display: flex;
+        padding-top: 40px;
+
+        img 
+        {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .requested-game-data .top-container > div:last-of-type .game-image, .random-game-data .top-container > div:last-of-type .game-image
+  {
+    max-height: 20vh;
+  }
+}
+
+
+@media all and (max-width: 480px)
+{
+  #pacman, #dragonica, #pokemon, #battlefield
+  {
+    display: none;
+  }
+
+  .requested-game-data, .random-game-data
+  {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  header, #search-game, #random-game
+  {
+    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    max-height: 200vh;
+    background: transparent linear-gradient(180deg, #311448 0%, #381752 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+  }
+
+  .requested-game-data .top-container > div:first-of-type .website-phone, .random-game-data .top-container > div:first-of-type .website-phone
+  {
+    display: block;
+  }
+
+  .requested-game-data .top-container > div:first-of-type .website, .random-game-data .top-container > div:first-of-type .website
+  {
+    display: none;
+  }
+}
+
+@media all and (max-width: 320px)
+{
+
+}
+
+
+//IMAGES POS-A
+#pacman
+{
+	position: absolute;
+	bottom: -15px;
+	right: 200px;
+	width: 150px;
+}
+
+#dragonica
+{
+	position: absolute;
+	bottom: -15px;
+	left: 50px;
+	width: 350px;
+}
+
+#pokemon
+{
+	position: absolute;
+	bottom: -7px;
+    left: 50px;
+    width: 250px;
+}
+
+#battlefield
+{
+	position: absolute;
+	bottom: -6px;
+    right: 60px;
+    width: 190px;
+}
+
+
+@media all and (max-width: 1170px)
+{
+
+}
+
+@media all and (max-width: 980px)
+{
+  #battlefield
+  {
+    display: none;
+  }
+}
+
+@media all and (max-width: 768px)
+{
+  #pacman, #dragonica, #pokemon
+  {
+    display: none;
+  }
+}
+
+@media all and (max-width: 480px)
+{
+
+}
+
+@media all and (max-width: 320px)
+{
+
+}

@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.random-btn
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border: none;
+	background: $search-bar-color;
+    border-radius: 49px;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    font-weight: $medium;
+    font-size: 14px;
+    color: $orange;
+    z-index: 1000;
+}
+
+@media all and (max-width: 768px)
+{
+    .random-btn
+    {
+        margin-top: 25px;
+    }
+}
