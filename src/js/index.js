@@ -1,4 +1,5 @@
 import '../css/main.scss';
+
 import SearchBarAnimation from './searchBar';
 import SearchedGame from './searchedGame';
 import RandomGame from './randomGame';
@@ -7,7 +8,6 @@ import $ from 'jquery';
 
 class GetAllVideoGames {
 
-	// constructor : nécessaire
 	constructor () {
         this.smoothScroll();
         new SearchBarAnimation();

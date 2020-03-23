@@ -59,6 +59,7 @@ config = {
                         options: {
                             context: PATHS.src,
                             name: `[path][name].[ext]`,
+                            esModule: false,
                         },
                     }
                 ]
@@ -70,6 +71,7 @@ config = {
                     options: {
                         context: PATHS.src,
                         name: '[path][name].[ext]',
+                        esModule: false,
                     },
                 }]
             },
@@ -77,13 +79,10 @@ config = {
     },
 
     plugins: [
-        new Html
-        {
-                test: /\.hbs$/,
-                use: 'handlebars-loader'
-            },Plugin({
+        new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            favicon: './src/img/favicon.png'
         }),
         new MiniCssExtractPlugin({
             filename: `style.css`
@@ -92,4 +91,3 @@ config = {
 };
 
 module.exports = config;
-

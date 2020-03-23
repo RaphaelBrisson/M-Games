@@ -86,8 +86,8 @@ header, #search-game, #random-game
       .game-image
       {
         //width: 100%;
-        max-height: 35vh;
-        max-width: 100%;
+        max-height: 34vh;
+        max-width: 95%;
       }
     }
   }
@@ -95,7 +95,7 @@ header, #search-game, #random-game
   .description
     {
       margin-top: 50px;
-      max-height: 200px;
+      max-height: 180px;
       overflow-y: scroll;
     }
 }
